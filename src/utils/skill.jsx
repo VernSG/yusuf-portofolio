@@ -27,21 +27,6 @@ export const skill = [
     title: "React JS",
   },
   {
-    id: 2,
-    icon: <SiExpress className="text-5xl text-white" />,
-    title: "Express JS",
-  },
-  {
-    id: 3,
-    icon: <TbBrandNextjs className="text-5xl text-white" />,
-    title: "Next JS",
-  },
-  {
-    id: 4,
-    icon: <SiRemix className="text-5xl text-white" />,
-    title: "Remix JS",
-  },
-  {
     id: 5,
     icon: <FaHtml5 className="text-5xl text-white" />,
     title: "HTML",
@@ -62,29 +47,9 @@ export const skill = [
     title: "Javascript",
   },
   {
-    id: 9,
-    icon: <SiTypescript className="text-5xl text-white" />,
-    title: "Typescript",
-  },
-  {
     id: 10,
     icon: <IoLogoFirebase className="text-5xl text-white" />,
     title: "Firebase",
-  },
-  {
-    id: 11,
-    icon: <SiPrisma className="text-5xl text-white" />,
-    title: "Prisma",
-  },
-  {
-    id: 12,
-    icon: <SiPostgresql className="text-5xl text-white" />,
-    title: "PostgreSQL",
-  },
-  {
-    id: 13,
-    icon: <SiMongodb className="text-5xl text-white" />,
-    title: "MongoDB",
   },
   {
     id: 14,
@@ -97,24 +62,9 @@ export const skill = [
     title: "MySQL",
   },
   {
-    id: 16,
-    icon: <SiThreedotjs className="text-5xl text-white" />,
-    title: "Three.js",
-  },
-  {
-    id: 17,
-    icon: <TbBrandFramerMotion className="text-5xl text-white" />,
-    title: "Framer",
-  },
-  {
     id: 18,
     icon: <SiVercel className="text-5xl text-white" />,
     title: "Vercel",
-  },
-  {
-    id: 19,
-    icon: <SiRedux className="text-5xl text-white" />,
-    title: "Redux",
   },
   {
     id: 20,
