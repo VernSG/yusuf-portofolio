@@ -36,10 +36,9 @@ const Hero = () => {
         </h1>
         <p className="font-poppins text-[15px] mt-3  text-gray-200">
           Hello, my name is Muhammad Yusuf Saputra. I bring with me 3 years of
-          experience as a Frontend Developer and 1 year as a Backend Developer.
-          I am proficient in utilizing modern technologies such as React JS and
-          Next JS to build cutting-edge web applications. On the backend, I
-          leverage Express JS to ensure seamless functionality.
+          experience as a Game Developer and 1 year as a Frontend Developer.
+          I am proficient in utilizing modern technologies such as C++ to build
+          a game.
         </p>
         <div className="btnGrub mt-5 flex gap-5">
           <button className="ring-1 font-semibold hover:cursor-pointer text-white font-karla hover:bg-[rgba(206,25,85,.1)] duration-300 px-5 py-2 rounded-full ring-[#ce1955]">
