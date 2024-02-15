@@ -94,7 +94,7 @@ const Achievement = () => {
                         </button>
                       </Link>
                       <Link to={`${item?.credential}`}>
-                        <button className="ring-[.5px]  flex gap-1 items-center bg-[#131313] ring-slate-600 px-4 font-medium font-sans py-2  text-sm rounded-full text-gray-200 duration-500 hover:text-pink-400 hover:ring-pink-400 hover:cursor-pointer href="https://www.dicoding.com/certificates/0LZ0269LNX65">
+                        <button className="ring-[.5px]  flex gap-1 items-center bg-[#131313] ring-slate-600 px-4 font-medium font-sans py-2  text-sm rounded-full text-gray-200 duration-500 hover:text-pink-400 hover:ring-pink-400 hover:cursor-pointer>
                           <TbExternalLink className="text-xl" />
                           <span>Show Credential</span>
                         </button>
