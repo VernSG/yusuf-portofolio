@@ -1,7 +1,5 @@
-// components/pagesHome/Homepage.jsx
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
-  Callsign,
   Hero,
   About,
   Experience,
@@ -14,7 +12,6 @@ import { analytics } from "../config/firebase";
 import SEO from "../utils/SEO";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 const Homepage = () => {
   useEffect(() => {
     logEvent(analytics, "homepage_event");
@@ -31,20 +28,19 @@ const Homepage = () => {
   return (
     <>
       <SEO
-        title="Muhammad Yusuf Saputra - Portfolio"
-        description=" Hello, My name is Muhammad Yusuf Saputra. I bring with me 3 years of experience as a Frontend Developer and 1 year as a Backend Developer. I am proficient in utilizing modern technologies such as React JS and Next JS to build cutting-edge web applications. On the backend, I leverage Express JS to ensure seamless functionality."
-        author="Muhammad Yusuf Saputra"
-        keywords="Muhammad Yusuf Saputra, Portfolio Muhammad Yusuf Saputra, Portfolio, Frontend Developer, Frontend Developer Portfolio,FullStack Web Developer"
+        title="Lucky Indra Efendi - Portfolio"
+        description=" Hello, my name is Lucky Indra Efendi. I have 3 years of experience as a Frontend Developer and 1 year as a Backend Developer. I am skilled in using modern technologies such as React JS and Next JS to develop advanced web applications. For backend development, I utilize Express JS and Nest JS to ensure smooth functionality."
+        author="Lucky Indra Efendi"
+        keywords="Lucky Indra Efendi, Portfolio Lucky Indra Efendi, Portfolio, Frontend Developer, Frontend Developer Portfolio,FullStack Web Developer"
         robots="index, follow"
         googleBot="index, nofollow, noimageindex, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
         OGUrl={import.meta.env.VITE_PUBLIC_URL}
         OGimage="/preview.png"
-        TwTitle="Muhammad Yusuf Saputra - Portfolio"
+        TwTitle="Lucky Indra Efendi - Portfolio"
         TwCard="/preview.png"
-        TwDesc=" Hello, My name is Muhammad Yusuf Saputra. I bring with me 3 years of experience as a Frontend Developer and 1 year as a Backend Developer. I am proficient in utilizing modern technologies such as React JS and Next JS to build cutting-edge web applications. On the backend, I leverage Express JS to ensure seamless functionality."
+        TwDesc=" Hello, my name is Lucky Indra Efendi. I have 3 years of experience as a Frontend Developer and 1 year as a Backend Developer. I am skilled in using modern technologies such as React JS and Next JS to develop advanced web applications. For backend development, I utilize Express JS and Nest JS to ensure smooth functionality."
       />
       <div className=" mt-32">
-        <Callsign /> {/* Tambahkan komponen Callsign di sini */}
         <Hero />
         <About />
         <Experience />
