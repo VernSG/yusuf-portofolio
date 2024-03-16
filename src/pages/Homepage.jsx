@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+// components/pagesHome/Homepage.jsx
+import React, { useEffect } from "react";
 import {
   Hero,
   About,
@@ -12,6 +13,8 @@ import { analytics } from "../config/firebase";
 import SEO from "../utils/SEO";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Callsign from "./Callsign"; // Impor komponen Callsign
+
 const Homepage = () => {
   useEffect(() => {
     logEvent(analytics, "homepage_event");
@@ -41,6 +44,7 @@ const Homepage = () => {
         TwDesc=" Hello, My name is Muhammad Yusuf Saputra. I bring with me 3 years of experience as a Frontend Developer and 1 year as a Backend Developer. I am proficient in utilizing modern technologies such as React JS and Next JS to build cutting-edge web applications. On the backend, I leverage Express JS to ensure seamless functionality."
       />
       <div className=" mt-32">
+        <Callsign /> {/* Tambahkan komponen Callsign di sini */}
         <Hero />
         <About />
         <Experience />
