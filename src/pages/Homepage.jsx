@@ -1,7 +1,7 @@
 // components/pagesHome/Homepage.jsx
 import React, { useEffect } from "react";
 import {
-  Callsign
+  Callsign,
   Hero,
   About,
   Experience,
