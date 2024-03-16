@@ -13,7 +13,7 @@ import { analytics } from "../config/firebase";
 import SEO from "../utils/SEO";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Callsign from "./Callsign"; // Impor komponen Callsign
+import Callsign from ".../Callsign.jsx"; // Impor komponen Callsign
 
 const Homepage = () => {
   useEffect(() => {
