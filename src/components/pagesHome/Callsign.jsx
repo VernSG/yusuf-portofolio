@@ -1,7 +1,9 @@
 // components/pagesHome/Callsign.jsx
 import React, { useEffect, useState } from "react";
+import Typed from "typed.js";
 import { Skeleton } from "@mui/material";
 import getUserData from "@/api/discordUser";
+
 
 const Callsign = () => {
   const [user, setUser] = useState({});
