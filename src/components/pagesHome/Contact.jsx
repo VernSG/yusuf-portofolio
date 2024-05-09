@@ -1,50 +1,48 @@
 import { IoSend } from "react-icons/io5";
 import { useForm } from "react-hook-form";
-import { db } from "../../config/firebase";
+import { db } from "/src/config/firebase.js";
 import { collection, addDoc } from "firebase/firestore";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
-const Contact = () => {
-  const [loading, setIsLoading] = useState(false);
-  const userCollectionRef = collection(db, "contacts");
+
+const SendMessage = () => {
+  const [loading, setLoading] = useState(false);
+  const userCollectionRef = collection(db, "contactss");
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     defaultValues: {
       firstName: "",
-      lastName: "",
       email: "",
+      subject: "",
       message: "",
     },
   });
+
   const onSubmit = async (data) => {
-    setIsLoading(true);
+    setLoading(true);
     try {
       await addDoc(userCollectionRef, data);
       toast.success("Successfully Sent");
-      setIsLoading(false);
+      reset();
     } catch (err) {
-      toast.error(err?.message);
+      toast.error("Failed to send message. Please try again later.");
     } finally {
-      setIsLoading(false);
+      setLoading(false);
     }
   };
+
   return (
     <>
-      <section id="contact" className="mt-28 ">
-        <div
-          className="grid justify-center"
-          data-aos="fade-up"
-          data-aos-offset="50"
-        >
-          <h1 className="text-white  font-poppins text-3xl sm:text-4xl font-bold uppercase ">
-            Contact Me
+      <section id="contact" className="mt-28">
+        <div className="grid justify-center" data-aos="fade-up" data-aos-offset="50">
+          <h1 className="text-white font-poppins text-3xl sm:text-4xl font-bold uppercase">
+            Send Messages
           </h1>
-          <p className="uppercase text-pink-400 text-center tracking-widest">
-            Connect with me
-          </p>
+          <p className="uppercase text-pink-400 text-center tracking-widest">Connect with us</p>
         </div>
         <div
           className="boxContainer mt-5"
@@ -57,45 +55,27 @@ const Contact = () => {
             noValidate
             className="md:w-2/3 w-full m-auto flex flex-col gap-5"
           >
-            <div className="firstname flex flex-col">
+            <div className="flex flex-col">
               <label
                 htmlFor="firstName"
                 className="text-white font-poppins text-lg tracking-wider font-semibold"
               >
-                First Name
+                Full Name
               </label>
               <input
                 type="text"
-                placeholder="Enter your First Name"
+                placeholder="Enter your Full Name"
                 id="firstName"
                 className="py-3 md:py-3 px-4 mt-3 rounded-md bg-[#1b1b1b] outline-none border-none ring-1 focus:ring-2 font-poppins text-white placeholder:text-slate-300 ring-pink-500"
                 {...register("firstName", {
-                  required: "FirstName is required",
+                  required: "Full Name is required",
                 })}
               />
               <p className="text-red-500 font-karla mt-2">
                 {errors?.firstName?.message}
               </p>
             </div>
-            <div className="firstname flex flex-col">
-              <label
-                htmlFor="lastName"
-                className="text-white font-poppins text-lg tracking-wider font-semibold"
-              >
-                Last Name
-              </label>
-              <input
-                type="text"
-                placeholder="Enter your Last Name"
-                id="lastName"
-                className="py-3 md:py-3 px-4 mt-3 rounded-md bg-[#1b1b1b] outline-none border-none ring-1 focus:ring-2 font-poppins text-white placeholder:text-slate-300 ring-pink-500"
-                {...register("lastName", { required: "LastName is required" })}
-              />
-              <p className="text-red-500 font-karla mt-2">
-                {errors?.lastName?.message}
-              </p>
-            </div>
-            <div className="firstname flex flex-col">
+            <div className="flex flex-col">
               <label
                 htmlFor="email"
                 className="text-white font-poppins text-lg tracking-wider font-semibold"
@@ -113,12 +93,12 @@ const Contact = () => {
                 {errors?.email?.message}
               </p>
             </div>
-            <div className="comment flex flex-col">
+            <div className="flex flex-col">
               <label
-                htmlFor="email"
+                htmlFor="message"
                 className="text-white font-poppins text-lg tracking-wider font-semibold"
               >
-                Comments / Questions
+                Message
               </label>
               <textarea
                 placeholder="Enter your Message"
@@ -130,23 +110,15 @@ const Contact = () => {
                 {errors?.message?.message}
               </p>
             </div>
-            {loading ? (
-              <button
-                className="py-3 px-5 rounded-md w-full flex items-center justify-center gap-3 bg-pink-600 shadow-sm ring-2 ring-pink-600 hover:ring-pink-500"
-                disabled
-              >
-                <span className="text-white font-karla text-xl font-bold ">
-                  Loading...
-                </span>
-              </button>
-            ) : (
-              <button className="py-3 px-5 rounded-md w-full flex items-center justify-center gap-3 bg-pink-600 shadow-sm ring-2 ring-pink-600 hover:ring-pink-500">
-                <IoSend className="text-white text-xl" />
-                <span className="text-white font-karla text-xl font-bold ">
-                  Send
-                </span>
-              </button>
-            )}
+            <button
+              className="py-3 px-5 rounded-md w-full flex items-center justify-center gap-3 bg-pink-600 shadow-sm ring-2 ring-pink-600 hover:ring-pink-500"
+              disabled={loading}
+            >
+              <IoSend className="text-white text-xl" />
+              <span className="text-white font-karla text-xl font-bold">
+                {loading ? "Sending..." : "Send"}
+              </span>
+            </button>
           </form>
         </div>
       </section>
@@ -155,4 +127,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default SendMessage;
