@@ -2,7 +2,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../config/firebase";
 import { Link } from "react-router-dom";
-import { BsExternalLinkSquare } from "react-icons/bs"; // Mengganti TbExternalLink dengan ikon yang sesuai
+import { BsExternalLinkSquare } from "react-icons/bs/BsExternalLinkSquare"; // Mengganti TbExternalLink dengan ikon yang sesuai
 
 const Achievement = () => {
   const [achievement, setAchievement] = useState([]);
