@@ -8,16 +8,16 @@ const Footer = () => {
           <Link to="https://github.com/LuckyIndraEfendi" target="_blank">
             <FaGithub className="text-4xl text-white" />
           </Link>
-          <Link to="https://www.instagram.com/lucz.code/" target="_blank">
+          <Link to="https://www.instagram.com/yusufff.rteex/" target="_blank">
             <FaInstagram className="text-4xl text-white" />
           </Link>
           <Link
-            to="https://www.linkedin.com/in/lucky-indra-efendi-868223221/"
+            to="https://www.linkedin.com/in/muhammad-yusuf-saputra/"
             target="_blank"
           >
             <FaLinkedin className="text-4xl text-white" />
           </Link>
-          <Link to="https://twitter.com/zwickyy_" target="_blank">
+          <Link to="" target="_blank">
             <FaXTwitter className="text-4xl text-white" />
           </Link>
         </div>
