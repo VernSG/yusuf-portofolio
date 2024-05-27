@@ -2,7 +2,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../config/firebase";
 import { Link } from "react-router-dom";
-import { BsExternalLinkSquare } from "react-icons/bs/BsExternalLinkSquare"; // Mengganti TbExternalLink dengan ikon yang sesuai
+import { TbExternalLink } from "react-icons/tb"; // Mengganti TbExternalLink dengan ikon yang sesuai
 
 const Achievement = () => {
   const [achievement, setAchievement] = useState([]);
@@ -96,7 +96,7 @@ const Achievement = () => {
                   </Link>
                   <a href={item.credential} target="_blank" rel="noopener noreferrer">
                     <button className="ring-[.5px]  flex gap-1 items-center bg-[#131313] ring-slate-600 px-4 font-medium font-sans py-2  text-sm rounded-full text-gray-200 duration-500 hover:text-pink-400 hover:ring-pink-400 hover:cursor-pointer">
-                      <BsExternalLinkSquare className="text-xl" />
+                      <TbExternalLink className="text-xl" />
                       <span>Show Credential</span>
                     </button>
                   </a>
