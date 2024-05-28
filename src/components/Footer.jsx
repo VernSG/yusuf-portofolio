@@ -5,7 +5,7 @@ const Footer = () => {
     <>
       <footer className="mt-40 ">
         <div className="icons flex gap-10 justify-center">
-          <Link to="https://github.com/LuckyIndraEfendi" target="_blank">
+          <Link to="https://github.com/VernSG" target="_blank">
             <FaGithub className="text-4xl text-white" />
           </Link>
           <Link to="https://www.instagram.com/yusufff.rteex/" target="_blank">
