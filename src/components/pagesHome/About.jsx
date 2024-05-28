@@ -18,7 +18,7 @@ const About = () => {
             data-aos-delay="300"
           >
             <img
-              src="/profile/profile2.jpeg"
+              src="/favicon.ico"
               alt=""
               onContextMenu={(e) => {
                 e.preventDefault();
